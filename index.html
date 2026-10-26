@@ -2,12 +2,16 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Menos Tela, Sem Guerra</title>
-<meta name="description" content="Plano de 21 dias para diminuir o tempo de tela das crianças de 2 a 10 anos, com menos choro e menos briga.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menos Tela, Sem Guerra · Plano de 21 dias</title>
+<meta name="description" content="Plano de 21 dias para diminuir o tempo de tela das crianças de 2 a 10 anos, com menos choro e menos briga. Guia em PDF por R$ 19,90.">
+<meta name="theme-color" content="#123A44">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Menos Tela, Sem Guerra">
 <meta property="og:description" content="Plano de 21 dias para diminuir o tempo de tela das crianças, com menos choro e menos briga.">
-<meta property="og:image" content="img/capa.jpg">
+<meta property="og:url" content="https://menostela.github.io/guia/">
+<meta property="og:image" content="https://menostela.github.io/guia/img/capa.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23123A44'/%3E%3Crect x='20' y='12' width='24' height='40' rx='6' fill='none' stroke='%23FFC145' stroke-width='5'/%3E%3Cpath d='M14 50L50 14' stroke='%23F05A3F' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,297 +31,462 @@ fbq('track', 'ViewContent', {content_name: 'Menos Tela, Sem Guerra', value: 19.9
 
 <style>
 :root {
-  --ink: #1E2A38; --muted: #5E6B78; --coral: #F05A3F; --coral-d: #D9442A; --coral-l: #FDE3DC;
-  --teal: #14857A; --teal-l: #DDF1EE; --deep: #123A44; --sun: #FFC145; --sun-l: #FFF1CC;
-  --cream: #FFF4E8; --peach: #FFE9D6; --line: #EBDDCC; --white: #fff;
+  --deep: #123A44;
+  --ink: #1E2A38;
+  --muted: #56636F;
+  --coral: #F05A3F;
+  --coral-dark: #C9402A;
+  --coral-soft: #FDE4DD;
+  --teal: #14857A;
+  --teal-soft: #DCF0EC;
+  --sun: #FFC145;
+  --sun-soft: #FFF1CC;
+  --peach: #FFE9D6;
+  --paper: #FFFAF4;
+  --line: #EADCCB;
+  --white: #FFFFFF;
+  --gutter: 20px;
+  --radius-lg: 22px;
+  --radius-md: 14px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Nunito', system-ui, sans-serif; color: var(--ink); background: var(--white); font-size: 18px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 18px; line-height: 1.6; color: var(--ink); background: var(--paper);
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
 img { display: block; max-width: 100%; height: auto; }
-.wrap { max-width: 600px; margin: 0 auto; padding: 0 20px; }
-section { padding: 56px 0; }
-h1, h2, h3 { color: var(--deep); line-height: 1.15; letter-spacing: -0.01em; }
-h1 { font-size: 38px; font-weight: 900; }
-h2 { font-size: 30px; font-weight: 900; margin-bottom: 18px; }
-h3 { font-size: 21px; font-weight: 900; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+b, strong { font-weight: 800; }
+
+.wrap { width: 100%; max-width: 680px; margin: 0 auto; padding: 0 var(--gutter); }
+.wrap-wide { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 var(--gutter); }
+.sec { padding: 64px 0; }
+.sec-tight { padding: 48px 0; }
+.bg-white { background: var(--white); }
+.bg-peach { background: var(--peach); }
+.bg-deep { background: var(--deep); color: #E3EEF0; }
+
+h1, h2, h3 { color: var(--deep); font-weight: 900; letter-spacing: -0.015em; }
+h1 { font-size: clamp(34px, 9vw, 54px); line-height: 1.05; }
+h2 { font-size: clamp(27px, 6.6vw, 38px); line-height: 1.12; margin-bottom: 18px; }
+h3 { font-size: 20px; line-height: 1.25; }
+.bg-deep h2, .bg-deep h3 { color: #fff; }
+.lead { font-size: 20px; line-height: 1.5; }
 p + p { margin-top: 14px; }
-b { font-weight: 800; }
-.kicker { font-size: 13px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: var(--coral); margin-bottom: 12px; }
+.note { font-size: 14px; line-height: 1.5; color: var(--muted); }
 
-.topbar { background: var(--deep); color: #DCEBEE; text-align: center; font-size: 14px; font-weight: 700; padding: 9px 16px; }
+/* ---------- topo ---------- */
+.topbar { background: var(--deep); color: #DCEBEE; font-size: 14px; font-weight: 700; text-align: center; padding: 9px var(--gutter); }
 
-/* hero */
-.hero { background: var(--peach); padding: 40px 0 48px; }
-.hero h1 span { color: var(--coral); }
-.hero .sub { font-size: 20px; margin-top: 16px; }
-.mock { position: relative; width: 62%; max-width: 300px; margin: 28px auto 26px; }
-.mock .back { position: absolute; inset: 0; transform: rotate(6deg) translate(18px, 6px); border-radius: 8px; box-shadow: 0 10px 30px rgba(18,58,68,.18); background: #fff; overflow: hidden; }
-.mock .front { position: relative; transform: rotate(-3deg); border-radius: 8px; overflow: hidden; box-shadow: 0 18px 40px rgba(18,58,68,.28); }
-.badge { position: absolute; right: -14px; top: -14px; z-index: 2; background: var(--sun); color: var(--deep); font-weight: 900; font-size: 15px; line-height: 1.1; text-align: center; width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transform: rotate(8deg); box-shadow: 0 6px 16px rgba(0,0,0,.15); }
+/* ---------- hero ---------- */
+.hero { background: var(--peach); padding: 30px 0 48px; overflow: hidden; }
+.hero-grid { display: grid; gap: 26px; }
+.hero .who { font-size: 16px; font-weight: 800; color: var(--teal); margin-bottom: 12px; }
+.hero .sub { font-size: 19px; line-height: 1.5; margin-top: 14px; max-width: 34ch; }
 
-.buy { background: var(--white); border-radius: 22px; padding: 24px 22px; box-shadow: 0 8px 30px rgba(18,58,68,.10); text-align: center; }
-.price { font-size: 52px; font-weight: 900; color: var(--deep); line-height: 1; }
-.price small { font-size: 22px; vertical-align: 18px; margin-right: 2px; }
-.price-note { font-size: 15px; color: var(--muted); margin-top: 6px; }
-.cta { display: block; width: 100%; margin-top: 18px; background: var(--coral); color: #fff; text-decoration: none; font-weight: 900; font-size: 21px; line-height: 1.2; padding: 19px 16px; border-radius: 16px; box-shadow: 0 6px 0 var(--coral-d); transition: transform .08s; }
-.cta:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--coral-d); }
-.safe { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: var(--muted); margin-top: 16px; }
-.safe svg { flex: none; }
+.mock { position: relative; width: min(52%, 220px); margin: 0 auto; aspect-ratio: 800 / 1133; }
+.mock .sheet { position: absolute; inset: 0; border-radius: 6px; background: #fff; box-shadow: 0 6px 18px rgba(18, 58, 68, .14); }
+.mock .sheet.s1 { transform: translate(14px, 10px) rotate(4deg); }
+.mock .sheet.s2 { transform: translate(7px, 5px) rotate(2deg); }
+.mock .cover { position: absolute; inset: 0; border-radius: 6px; overflow: hidden;
+  box-shadow: 0 24px 46px rgba(18, 58, 68, .30), inset 0 0 0 1px rgba(0,0,0,.04); transform: rotate(-2deg); }
+.mock .cover img { width: 100%; height: 100%; object-fit: cover; }
+.mock .cover::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 14px;
+  background: linear-gradient(90deg, rgba(0,0,0,.22), rgba(0,0,0,0)); }
 
-/* dor */
-.pain li { list-style: none; position: relative; padding: 14px 16px 14px 52px; background: var(--cream); border-radius: 14px; margin-bottom: 10px; font-weight: 700; }
-.pain li::before { content: ""; position: absolute; left: 16px; top: 50%; width: 22px; height: 22px; margin-top: -11px; border-radius: 50%; background: var(--coral-l); border: 3px solid var(--coral); }
-.callout { margin-top: 24px; background: var(--deep); color: #fff; border-radius: 18px; padding: 24px 22px; }
-.callout h3 { color: var(--sun); margin-bottom: 8px; }
+.buy { background: var(--white); border-radius: var(--radius-lg); padding: 24px 20px 20px; box-shadow: 0 14px 40px rgba(18, 58, 68, .12); }
+.buy .label { font-size: 15px; font-weight: 700; color: var(--muted); text-align: center; }
+.price { display: flex; align-items: flex-start; justify-content: center; gap: 4px; color: var(--deep); font-weight: 900; line-height: 1; margin-top: 6px; }
+.price .cur { font-size: 22px; margin-top: 8px; }
+.price .val { font-size: 58px; letter-spacing: -0.02em; }
+.cta { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 60px; margin-top: 18px; padding: 14px 18px;
+  background: var(--coral); color: #fff; text-decoration: none; font-weight: 900; font-size: 20px; line-height: 1.2; text-align: center;
+  border-radius: 16px; box-shadow: 0 5px 0 var(--coral-dark); transition: transform .08s ease, box-shadow .08s ease; }
+.cta:hover { background: #EE4E32; }
+.cta:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--coral-dark); }
+.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 18px; }
+.trust div { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 13px; line-height: 1.3; font-weight: 700; color: var(--muted); }
+.trust svg { width: 26px; height: 26px; flex: none; }
 
-/* dados */
-.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
-.stat { background: var(--cream); border-radius: 16px; padding: 18px 16px; }
-.stat b { display: block; font-size: 34px; font-weight: 900; color: var(--coral); line-height: 1.05; }
-.stat span { display: block; font-size: 15px; color: var(--muted); line-height: 1.35; margin-top: 6px; }
-.src { font-size: 13px; color: var(--muted); margin-top: 12px; }
+/* ---------- dor ---------- */
+.pain { list-style: none; display: grid; gap: 10px; margin-top: 6px; }
+.pain li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px 16px; font-weight: 700; line-height: 1.45; }
+.pain li svg { width: 30px; height: 30px; }
+.answer { margin-top: 28px; background: var(--deep); color: #E3EEF0; border-radius: var(--radius-lg); padding: 26px 22px; }
+.answer h3 { color: var(--sun); font-size: 24px; margin-bottom: 10px; }
 
-/* semanas */
-.weeks { display: flex; flex-direction: column; gap: 12px; }
-.week { display: flex; gap: 16px; align-items: flex-start; background: var(--white); border: 2px solid var(--line); border-radius: 18px; padding: 18px; }
-.week .n { flex: none; width: 54px; height: 54px; border-radius: 14px; background: var(--teal); color: #fff; font-weight: 900; font-size: 13px; line-height: 1.05; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-.week .n b { font-size: 24px; }
-.week.zero .n { background: var(--sun); color: var(--deep); }
-.week h3 { font-size: 19px; }
-.week p { font-size: 16px; margin-top: 4px; }
+/* ---------- recomendação ---------- */
+.rec { display: grid; gap: 12px; margin-top: 8px; }
+.rec-row { display: grid; gap: 2px; background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--teal); border-radius: var(--radius-md); padding: 13px 18px; }
+.rec-row .age { font-weight: 700; font-size: 15px; color: var(--muted); line-height: 1.3; }
+.rec-row .lim { font-weight: 900; font-size: 21px; color: var(--deep); line-height: 1.25; }
+.reality { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 26px; }
+.reality div { background: var(--coral-soft); border-radius: var(--radius-md); padding: 18px 16px; }
+.reality b { display: block; font-size: 36px; line-height: 1; font-weight: 900; color: var(--coral-dark); }
+.reality span { display: block; font-size: 15px; line-height: 1.4; margin-top: 8px; color: var(--ink); }
+.src { font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.5; }
 
-/* conteudo */
-.bg-cream { background: var(--cream); }
-.items { display: flex; flex-direction: column; gap: 14px; }
-.item { display: flex; gap: 14px; align-items: flex-start; }
-.item .ic { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--teal); display: flex; align-items: center; justify-content: center; margin-top: 2px; }
-.item h3 { font-size: 19px; }
-.item p { font-size: 16px; color: var(--ink); margin-top: 2px; }
+/* ---------- como funciona ---------- */
+.timeline { list-style: none; position: relative; margin-top: 10px; }
+.timeline::before { content: ""; position: absolute; left: 27px; top: 30px; bottom: 30px; width: 3px; background: var(--line); border-radius: 2px; }
+.timeline li { position: relative; display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 10px 0; }
+.timeline .mark { width: 56px; height: 56px; border-radius: 16px; background: var(--teal); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; font-weight: 800; font-size: 12px; position: relative; z-index: 1; }
+.timeline .mark b { font-size: 24px; font-weight: 900; margin-top: 2px; }
+.timeline li:first-child .mark { background: var(--sun); color: var(--deep); }
+.timeline h3 { margin-top: 4px; }
+.timeline p { font-size: 16px; line-height: 1.5; margin-top: 4px; }
 
-.gallery { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 20px 18px; margin: 24px -20px 0; -webkit-overflow-scrolling: touch; }
-.gallery figure { flex: none; width: 72%; max-width: 300px; scroll-snap-align: center; }
-.gallery img { border-radius: 8px; box-shadow: 0 8px 22px rgba(18,58,68,.16); }
-.gallery figcaption { font-size: 14px; font-weight: 700; color: var(--muted); margin-top: 10px; text-align: center; }
-.hint { text-align: center; font-size: 14px; color: var(--muted); }
+/* ---------- conteúdo ---------- */
+.items { display: grid; gap: 18px; margin-top: 8px; }
+.item { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+.item .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--teal-soft); display: flex; align-items: center; justify-content: center; }
+.item .ic svg { width: 24px; height: 24px; }
+.item p { font-size: 16px; line-height: 1.5; margin-top: 2px; }
+
+.peek-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 52px 0 6px; }
+.peek-head h3 { font-size: 24px; }
+.peek-head p { font-size: 16px; color: var(--muted); margin-top: 4px; }
+.arrows { display: none; gap: 8px; flex: none; }
+.arrows button { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--deep); background: var(--white); color: var(--deep); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.arrows button:disabled { opacity: .3; cursor: default; }
+.peek { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter);
+  padding: 14px var(--gutter) 22px; margin: 0 calc(var(--gutter) * -1); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.peek::-webkit-scrollbar { display: none; }
+.card { flex: 0 0 min(86vw, 340px); scroll-snap-align: start; }
+.card .frame { position: relative; border-radius: var(--radius-md); overflow: hidden; background: #fff; box-shadow: 0 10px 28px rgba(18, 58, 68, .14); border: 1px solid var(--line); }
+.card .frame img { width: 100%; }
+.card .frame::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(rgba(255,255,255,0), #fff 78%); }
+.card .more { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1; white-space: nowrap; font-size: 13px; font-weight: 800; color: var(--deep); background: var(--sun-soft); border-radius: 30px; padding: 5px 12px; }
+.card .cap { font-weight: 800; color: var(--deep); font-size: 16px; margin-bottom: 10px; }
+.swipe { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--muted); }
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 10px; }
+.dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line); transition: background .2s, width .2s; }
+.dots span.on { background: var(--deep); width: 22px; border-radius: 4px; }
+
+/* imprimir */
+.print { display: grid; gap: 26px; align-items: center; margin-top: 56px; }
+.fan { position: relative; height: 270px; max-width: 340px; width: 100%; margin: 0 auto; }
+.fan img { position: absolute; top: 18px; width: 46%; border-radius: 4px; box-shadow: 0 10px 24px rgba(18, 58, 68, .2); border: 1px solid var(--line); background: #fff; }
+.fan img:nth-child(1) { left: 2%; transform: rotate(-9deg); }
+.fan img:nth-child(2) { left: 27%; top: 4px; z-index: 2; transform: rotate(-1deg); }
+.fan img:nth-child(3) { left: 52%; z-index: 1; transform: rotate(8deg); }
+.print ul { list-style: none; display: grid; gap: 10px; margin-top: 12px; }
+.print li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 17px; line-height: 1.4; }
+.print li svg { width: 22px; height: 22px; margin-top: 2px; }
 
 /* para quem */
-.fit { display: grid; gap: 12px; }
-.fit div { border-radius: 18px; padding: 20px; }
-.fit .yes { background: var(--teal-l); }
-.fit .no { background: var(--coral-l); }
-.fit h3 { margin-bottom: 10px; }
-.fit li { list-style: none; position: relative; padding-left: 28px; font-size: 16px; margin-bottom: 8px; }
-.fit .yes li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
-.fit .no li::before { content: "✕"; position: absolute; left: 0; color: var(--coral-d); font-weight: 900; }
+.fit { display: grid; gap: 14px; }
+.fit > div { border-radius: var(--radius-lg); padding: 22px 20px; }
+.fit .yes { background: var(--teal-soft); }
+.fit .no { background: var(--white); border: 1px solid var(--line); }
+.fit h3 { margin-bottom: 12px; }
+.fit ul { list-style: none; display: grid; gap: 10px; }
+.fit li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 17px; line-height: 1.45; }
+.fit li svg { width: 22px; height: 22px; margin-top: 2px; }
 
 /* garantia */
-.guarantee { display: flex; gap: 18px; align-items: center; background: var(--sun-l); border-radius: 20px; padding: 22px; }
-.seal { flex: none; width: 84px; height: 84px; border-radius: 50%; background: var(--sun); color: var(--deep); font-weight: 900; text-align: center; line-height: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 13px; }
-.seal b { font-size: 32px; }
+.guarantee { display: grid; grid-template-columns: 104px 1fr; gap: 20px; align-items: center; background: var(--sun-soft); border-radius: var(--radius-lg); padding: 24px 20px; }
+.guarantee svg.seal { width: 104px; height: 104px; }
+.guarantee h3 { font-size: 22px; margin-bottom: 6px; }
+.guarantee p { font-size: 16px; line-height: 1.5; }
+
+/* passos da compra */
+.steps3 { list-style: none; display: grid; gap: 12px; counter-reset: s; margin-top: 6px; }
+.steps3 li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: center; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px 16px; font-size: 17px; line-height: 1.4; }
+.steps3 li::before { counter-increment: s; content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--deep); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; }
 
 /* oferta final */
-.offer { background: var(--deep); color: #fff; }
-.offer h2 { color: #fff; }
-.offer .list li { list-style: none; position: relative; padding-left: 30px; margin-bottom: 10px; font-weight: 700; }
-.offer .list li::before { content: "✓"; position: absolute; left: 0; color: var(--sun); font-weight: 900; }
-.offer .buy { margin-top: 26px; }
+.offer-list { list-style: none; display: grid; gap: 12px; margin: 6px 0 28px; }
+.offer-list li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; font-size: 18px; line-height: 1.4; font-weight: 700; color: #fff; }
+.offer-list svg { width: 24px; height: 24px; margin-top: 1px; }
+.bg-deep .buy { color: var(--ink); }
 
 /* faq */
-details { border-bottom: 2px solid var(--line); padding: 18px 0; }
-summary { font-weight: 800; font-size: 18px; cursor: pointer; list-style: none; position: relative; padding-right: 32px; color: var(--deep); }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; position: absolute; right: 4px; top: -2px; font-size: 26px; color: var(--coral); font-weight: 900; }
-details[open] summary::after { content: "−"; }
-details p { font-size: 16px; margin-top: 10px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 26px; gap: 14px; align-items: center; padding: 18px 0; font-weight: 800; font-size: 18px; line-height: 1.35; color: var(--deep); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary svg { width: 26px; height: 26px; transition: transform .2s; }
+.faq details[open] summary svg { transform: rotate(45deg); }
+.faq details p { font-size: 17px; line-height: 1.55; padding: 0 0 20px; margin-top: -4px; }
 
-footer { background: var(--cream); padding: 34px 0 110px; font-size: 14px; color: var(--muted); text-align: center; }
-footer .brand { font-weight: 900; font-size: 18px; color: var(--teal); }
-footer .brand span { color: var(--coral); }
-footer a { color: var(--muted); }
+footer { background: var(--deep); color: #B9CDD1; padding: 36px 0 120px; font-size: 14px; line-height: 1.6; text-align: center; }
+footer .brand { font-weight: 900; font-size: 20px; color: #fff; }
 footer p { margin-top: 8px; }
+footer a { color: #DCEBEE; }
 
 /* barra fixa */
-.sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: rgba(255,255,255,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 14px; transform: translateY(110%); transition: transform .25s; }
-.sticky.on { transform: none; }
-.sticky .p { font-weight: 900; font-size: 22px; color: var(--deep); line-height: 1; white-space: nowrap; }
-.sticky .p small { display: block; font-size: 12px; color: var(--muted); font-weight: 700; margin-top: 3px; }
-.sticky .cta { margin: 0; flex: 1; font-size: 17px; padding: 14px 10px; box-shadow: 0 4px 0 var(--coral-d); }
-@media (min-width: 640px) {
-  h1 { font-size: 46px; }
+.sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; gap: 14px;
+  padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, .97);
+  border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(18, 58, 68, .08);
+  transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; }
+.sticky.on { transform: none; visibility: visible; transition: transform .25s ease, visibility 0s; }
+.sticky .p { font-weight: 900; color: var(--deep); font-size: 22px; line-height: 1; white-space: nowrap; }
+.sticky .p small { display: block; font-size: 12px; font-weight: 700; color: var(--muted); margin-top: 4px; }
+.sticky .cta { margin: 0; flex: 1; min-height: 52px; font-size: 18px; box-shadow: 0 4px 0 var(--coral-dark); }
+
+@media (min-width: 720px) {
+  .sec { padding: 88px 0; }
+  .arrows { display: flex; }
+  .swipe { display: none; }
+  .card { flex-basis: 300px; }
+  .print { grid-template-columns: 1fr 1fr; }
+  .fit { grid-template-columns: 1fr 1fr; }
+  .reality div { padding: 22px 20px; }
+}
+@media (min-width: 960px) {
+  .hero { padding: 64px 0 80px; }
+  .hero-grid { grid-template-columns: 1.05fr .95fr; align-items: center; column-gap: 56px; }
+  .hero-text { grid-column: 1; grid-row: 1; }
+  .hero-mock { grid-column: 2; grid-row: 1 / span 2; }
+  .hero-buy { grid-column: 1; grid-row: 2; max-width: 440px; }
+  .mock { width: 340px; }
+  .peek { margin: 0; padding-left: 0; padding-right: 0; scroll-padding: 0; }
   .sticky { justify-content: center; }
-  .sticky .cta { flex: 0 1 360px; }
+  .sticky .cta { flex: 0 1 380px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">Guia digital em PDF · acesso imediato após o pagamento</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#14857A"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFC145"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#123A44" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FDE4DD"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="#C9402A" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 30 30"><rect width="30" height="30" rx="9" fill="#FDE4DD"/><path d="M17 5L9 17h6l-2 8 8-12h-6z" fill="#F05A3F"/></symbol>
+    <symbol id="i-pay" viewBox="0 0 26 26"><rect x="2" y="5" width="22" height="16" rx="3.5" fill="none" stroke="#14857A" stroke-width="2.2"/><path d="M2 10h22" stroke="#14857A" stroke-width="2.2"/><path d="M6 16h5" stroke="#14857A" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 26 26"><rect x="2" y="5" width="22" height="16" rx="3.5" fill="none" stroke="#14857A" stroke-width="2.2"/><path d="M3 7l10 7 10-7" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 26 26"><path d="M13 2.5l9 3.3v6.4c0 5.6-3.9 9.5-9 11.3-5.1-1.8-9-5.7-9-11.3V5.8z" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linejoin="round"/><path d="M9 13l2.7 2.7L17.5 10" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="#FDE4DD"/><path d="M13 8v10M8 13h10" stroke="#C9402A" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">Guia digital em PDF, com acesso imediato</div>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="kicker">Para mães e pais de crianças de 2 a 10 anos</div>
-    <h1>Desligar a tela não precisa virar <span>guerra</span></h1>
-    <p class="sub">Um plano de 21 dias, passo a passo, para diminuir o tempo de tela com menos choro, menos grito e menos negociação.</p>
-
-    <div class="mock">
-      <div class="badge">21 dias<br>passo a<br>passo</div>
-      <div class="back"><img src="img/brincadeiras.jpg" alt="" width="800" height="1133"></div>
-      <div class="front"><img src="img/capa.jpg" alt="Capa do guia Menos Tela, Sem Guerra" width="800" height="1133"></div>
+  <div class="wrap-wide hero-grid">
+    <div class="hero-text">
+      <p class="who">Para mães e pais de crianças de 2 a 10 anos</p>
+      <h1>Desligar a tela não precisa virar guerra</h1>
+      <p class="sub">Um plano de 21 dias, passo a passo, para diminuir o tempo de tela com menos choro, menos grito e menos negociação.</p>
     </div>
-
-    <div class="buy" id="comprar">
-      <div class="price"><small>R$</small>19,90</div>
-      <div class="price-note">pagamento único · PDF para ler no celular ou imprimir</div>
-      <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI">Quero o guia por R$ 19,90</a>
-      <div class="safe"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 7 dias ou seu dinheiro de volta</div>
+    <div class="hero-mock">
+      <div class="mock" role="img" aria-label="Capa do guia Menos Tela, Sem Guerra">
+        <div class="sheet s1"></div><div class="sheet s2"></div>
+        <div class="cover"><img src="img/capa.jpg" alt="" width="900" height="1275"></div>
+      </div>
+    </div>
+    <div class="hero-buy">
+      <div class="buy" id="comprar">
+        <p class="label">Pagamento único</p>
+        <div class="price"><span class="cur">R$</span><span class="val">19,90</span></div>
+        <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI">Comprar o guia</a>
+        <div class="trust">
+          <div><svg><use href="#i-pay"/></svg>Pix ou cartão</div>
+          <div><svg><use href="#i-mail"/></svg>Acesso na hora, no seu e-mail</div>
+          <div><svg><use href="#i-shield"/></svg>Garantia de 7 dias</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<section>
+<section class="sec">
   <div class="wrap">
-    <h2>Isso acontece aí na sua casa?</h2>
+    <h2>Se a hora de desligar aí em casa é assim</h2>
     <ul class="pain">
-      <li>Você avisa que acabou o tempo e começa o choro.</li>
-      <li>"Só mais 5 minutinhos" vira meia hora.</li>
-      <li>Na hora de cozinhar ou tomar banho, o celular é a única coisa que funciona.</li>
-      <li>Você já tentou tirar de vez, e a casa virou um campo de batalha.</li>
-      <li>E no fim do dia vem a culpa.</li>
+      <li><svg><use href="#i-bolt"/></svg>Você avisa que acabou o tempo e começa o choro.</li>
+      <li><svg><use href="#i-bolt"/></svg>"Só mais 5 minutinhos" vira meia hora.</li>
+      <li><svg><use href="#i-bolt"/></svg>Na hora de cozinhar ou tomar banho, o celular é a única coisa que funciona.</li>
+      <li><svg><use href="#i-bolt"/></svg>Você já tentou tirar de vez, e a casa virou um campo de batalha.</li>
+      <li><svg><use href="#i-bolt"/></svg>E no fim do dia vem a culpa.</li>
     </ul>
-    <div class="callout">
-      <h3>Não é falta de pulso.</h3>
-      <p>Vídeos e jogos são feitos para prender a atenção, e cortar tudo de uma vez quase sempre termina em briga. O que costuma funcionar é diminuir aos poucos, com regra clara, aviso antes e outra coisa no lugar da tela.</p>
-      <p>É exatamente isso que o guia ensina, um dia de cada vez.</p>
+    <div class="answer">
+      <h3>Não é falta de pulso</h3>
+      <p>Vídeos e jogos são feitos para prender a atenção, e cortar tudo de uma vez quase sempre termina em briga. O que costuma funcionar é diminuir aos poucos: regra clara, aviso antes de desligar e outra coisa para fazer no lugar.</p>
+      <p>É isso que o guia ensina, um dia de cada vez.</p>
     </div>
   </div>
 </section>
 
-<section class="bg-cream">
+<section class="sec bg-white">
   <div class="wrap">
-    <div class="kicker">Você não está sozinha</div>
     <h2>Quanto tempo de tela é recomendado?</h2>
-    <p>A Sociedade Brasileira de Pediatria recomenda:</p>
-    <div class="stats" style="margin-top:16px">
-      <div class="stat"><b>até 1h</b><span>por dia, de 2 a 5 anos</span></div>
-      <div class="stat"><b>1 a 2h</b><span>por dia, de 6 a 10 anos</span></div>
+    <p>A Sociedade Brasileira de Pediatria orienta:</p>
+    <div class="rec" style="margin-top:16px">
+      <div class="rec-row"><span class="age">Menos de 2 anos</span><span class="lim">evitar telas</span></div>
+      <div class="rec-row"><span class="age">De 2 a 5 anos</span><span class="lim">até 1 hora por dia</span></div>
+      <div class="rec-row"><span class="age">De 6 a 10 anos</span><span class="lim">1 a 2 horas por dia</span></div>
+      <div class="rec-row"><span class="age">Todas as idades</span><span class="lim">sem tela 1 a 2 horas antes de dormir</span></div>
     </div>
-    <p style="margin-top:22px">Na prática, quase toda criança passa disso:</p>
-    <div class="stats" style="margin-top:12px">
-      <div class="stat"><b>94%</b><span>das crianças de 4 a 6 anos usam telas todos os dias</span></div>
-      <div class="stat"><b>4 em 10</b><span>cuidadores acham que as crianças usam tela demais</span></div>
+    <p style="margin-top:30px">Na prática, quase toda casa passa disso:</p>
+    <div class="reality">
+      <div><b>94%</b><span>das crianças de 4 a 6 anos usam telas todos os dias</span></div>
+      <div><b>40%</b><span>dos cuidadores acham que as crianças usam tela demais</span></div>
     </div>
-    <p class="src">Fontes: Sociedade Brasileira de Pediatria (2024); Panorama da Primeira Infância, Datafolha para a Fundação Maria Cecilia Souto Vidigal (2025).</p>
+    <p class="src">Fontes: Sociedade Brasileira de Pediatria (atualização de 2024); Panorama da Primeira Infância, pesquisa Datafolha para a Fundação Maria Cecilia Souto Vidigal (2025).</p>
   </div>
 </section>
 
-<section>
+<section class="sec">
   <div class="wrap">
-    <div class="kicker">Como funciona</div>
-    <h2>Três semanas, um passo curto por dia</h2>
-    <div class="weeks">
-      <div class="week zero"><div class="n">DIA<b>0</b></div><div><h3>Prepare o terreno</h3><p>3 dias só observando, sem mudar nada. Você descobre em que momentos a tela aparece e combina as regras com os outros adultos da casa.</p></div></div>
-      <div class="week"><div class="n">SEM.<b>1</b></div><div><h3>Tela com hora</h3><p>A tela ganha hora para começar e para acabar, e você aprende o jeito certo de desligar.</p></div></div>
-      <div class="week"><div class="n">SEM.<b>2</b></div><div><h3>Outra coisa no lugar</h3><p>Para cada momento em que a criança pede a tela, uma troca pronta que funciona.</p></div></div>
-      <div class="week"><div class="n">SEM.<b>3</b></div><div><h3>Virar costume</h3><p>O combinado vira rotina da casa, e você aprende a manter sem voltar à estaca zero.</p></div></div>
-    </div>
-    <p style="margin-top:18px;font-size:16px;color:var(--muted)">As tarefas são curtas e cabem na rotina de quem trabalha fora.</p>
+    <h2>Como o plano funciona</h2>
+    <p>Três semanas, com uma tarefa curta por dia. Sem proibir de vez e sem precisar virar a vilã da casa.</p>
+    <ol class="timeline" style="margin-top:22px">
+      <li><div class="mark">DIA<b>0</b></div><div><h3>Prepare o terreno</h3><p>Durante 3 dias você só observa, sem mudar nada. Descobre em que momentos a tela aparece e combina as regras com os outros adultos da casa.</p></div></li>
+      <li><div class="mark">SEM.<b>1</b></div><div><h3>A tela ganha hora</h3><p>A tela passa a ter hora para começar e para acabar, e você aprende o jeito certo de desligar.</p></div></li>
+      <li><div class="mark">SEM.<b>2</b></div><div><h3>Outra coisa no lugar</h3><p>Para cada momento em que a criança pede a tela, uma troca pronta para usar.</p></div></li>
+      <li><div class="mark">SEM.<b>3</b></div><div><h3>Vira costume</h3><p>O combinado entra na rotina da casa, e você aprende a manter sem voltar à estaca zero.</p></div></li>
+    </ol>
   </div>
 </section>
 
-<section class="bg-cream">
+<section class="sec bg-white">
   <div class="wrap">
-    <div class="kicker">O que vem no guia</div>
-    <h2>Tudo pronto para usar, em 38 páginas</h2>
-    <div class="items">
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>Plano de 21 dias</h3><p>Uma tarefa curta para cada dia, com o que fazer e o que dizer.</p></div></div>
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>Como desligar sem briga, em 5 passos</h3><p>O roteiro para a hora mais difícil do dia.</p></div></div>
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>O que fazer na hora da crise</h3><p>4 passos para quando a criança explode, e frases prontas para cada momento.</p></div></div>
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>100 brincadeiras sem tela</h3><p>Separadas por idade (2 a 3, 4 a 5, 6 a 8 e 9 a 10 anos) e marcadas: para brincar sozinho, sem material ou com um adulto.</p></div></div>
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>O celular a seu favor</h3><p>Como configurar iPhone, Android e YouTube para ajudar a cumprir o combinado.</p></div></div>
-      <div class="item"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><h3>Materiais para imprimir</h3><p>O plano inteiro numa folha, checklist dos 21 dias, quadro da rotina, contrato da família e pote das brincadeiras.</p></div></div>
+    <h2>O que vem no guia</h2>
+    <p>38 páginas, escritas em linguagem simples, para ler no celular ou imprimir.</p>
+    <div class="items" style="margin-top:24px">
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2.5 2.5L16 12"/></svg></div><div><h3>Plano de 21 dias</h3><p>Uma tarefa curta para cada dia, com o que fazer e o que dizer.</p></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4M9 9l6 6M15 9l-6 6"/></svg></div><div><h3>Como desligar sem briga, em 5 passos</h3><p>O roteiro para a hora mais difícil do dia.</p></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div><div><h3>O que fazer na hora da crise</h3><p>4 passos para quando a criança explode, e frases prontas para cada momento.</p></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><rect x="8" y="3" width="8" height="8" rx="1.5"/></svg></div><div><h3>100 brincadeiras sem tela</h3><p>Separadas por idade (2 a 3, 4 a 5, 6 a 8 e 9 a 10 anos), indicando quais dá para brincar sozinho, sem material ou com um adulto.</p></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div><div><h3>O celular a seu favor</h3><p>Como configurar iPhone, Android e YouTube para ajudar a cumprir o combinado.</p></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg></div><div><h3>Materiais para imprimir</h3><p>O plano inteiro numa folha, checklist dos 21 dias, quadro da rotina, contrato da família e pote das brincadeiras.</p></div></div>
     </div>
+  </div>
 
-    <div class="gallery" aria-label="Páginas do guia">
-      <figure><img src="img/desligar.jpg" alt="Página: Como desligar sem briga, em 5 passos" loading="lazy" width="800" height="1133"><figcaption>Como desligar sem briga</figcaption></figure>
-      <figure><img src="img/semana1.jpg" alt="Página: Semana 1 do plano" loading="lazy" width="800" height="1133"><figcaption>Semana 1, dia a dia</figcaption></figure>
-      <figure><img src="img/frases.jpg" alt="Página: frases prontas" loading="lazy" width="800" height="1133"><figcaption>Frases prontas</figcaption></figure>
-      <figure><img src="img/brincadeiras.jpg" alt="Página: brincadeiras de 2 a 3 anos" loading="lazy" width="800" height="1133"><figcaption>Brincadeiras por idade</figcaption></figure>
-      <figure><img src="img/plano.jpg" alt="Página: o plano inteiro numa folha" loading="lazy" width="800" height="1133"><figcaption>O plano numa folha</figcaption></figure>
+  <div class="wrap-wide">
+    <div class="peek-head">
+      <div><h3>Leia alguns trechos</h3><p>Do jeito que estão no guia.</p></div>
+      <div class="arrows"><button type="button" id="prev" aria-label="Trecho anterior"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M12.5 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" id="next" aria-label="Próximo trecho"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
     </div>
-    <p class="hint">Arraste para o lado para ver mais páginas</p>
+    <div class="peek" id="peek">
+      <figure class="card"><figcaption class="cap">Como desligar sem briga</figcaption><div class="frame"><img src="img/trecho_desligar.jpg" alt="Trecho do guia: Como desligar sem briga, em 5 passos" width="754" height="1132" loading="lazy"><span class="more">continua no guia</span></div></figure>
+      <figure class="card"><figcaption class="cap">Semana 1, dia a dia</figcaption><div class="frame"><img src="img/trecho_semana1.jpg" alt="Trecho do guia: Semana 1, a tela ganha hora para começar e para acabar" width="754" height="1132" loading="lazy"><span class="more">continua no guia</span></div></figure>
+      <figure class="card"><figcaption class="cap">Na hora da crise</figcaption><div class="frame"><img src="img/trecho_crise.jpg" alt="Trecho do guia: 4 passos quando a criança explode" width="754" height="1132" loading="lazy"><span class="more">continua no guia</span></div></figure>
+      <figure class="card"><figcaption class="cap">Frases prontas</figcaption><div class="frame"><img src="img/trecho_frases.jpg" alt="Trecho do guia: o que dizer em cada momento" width="754" height="1132" loading="lazy"><span class="more">continua no guia</span></div></figure>
+      <figure class="card"><figcaption class="cap">Brincadeiras por idade</figcaption><div class="frame"><img src="img/trecho_brincadeiras.jpg" alt="Trecho do guia: brincadeiras sem tela de 2 a 3 anos" width="754" height="1132" loading="lazy"><span class="more">continua no guia</span></div></figure>
+    </div>
+    <p class="swipe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#56636F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M15 8l4 4-4 4"/></svg>Arraste para o lado para ver mais</p>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="print">
+      <div class="fan" aria-hidden="true">
+        <img src="img/imprimir_34.jpg" alt="" width="560" height="793" loading="lazy">
+        <img src="img/imprimir_35.jpg" alt="" width="560" height="793" loading="lazy">
+        <img src="img/imprimir_36.jpg" alt="" width="560" height="793" loading="lazy">
+      </div>
+      <div>
+        <h3 style="font-size:24px">Para imprimir e colar na geladeira</h3>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>O plano inteiro numa folha</li>
+          <li><svg><use href="#i-check"/></svg>Checklist dos 21 dias</li>
+          <li><svg><use href="#i-check"/></svg>Quadro da rotina, para montar com a criança</li>
+          <li><svg><use href="#i-check"/></svg>Contrato da família</li>
+          <li><svg><use href="#i-check"/></svg>Pote das brincadeiras, com papeizinhos para sortear</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="sec">
   <div class="wrap">
-    <h2>Para quem é este guia</h2>
+    <h2>Para quem é o guia</h2>
     <div class="fit">
       <div class="yes">
-        <h3>É para você se:</h3>
+        <h3>É para você se</h3>
         <ul>
-          <li>seu filho tem entre 2 e 10 anos;</li>
-          <li>a hora de desligar virou motivo de briga;</li>
-          <li>você quer diminuir a tela, sem proibir de vez;</li>
-          <li>você tem pouco tempo e quer algo direto ao ponto.</li>
+          <li><svg><use href="#i-check"/></svg>seu filho tem entre 2 e 10 anos;</li>
+          <li><svg><use href="#i-check"/></svg>a hora de desligar virou motivo de briga;</li>
+          <li><svg><use href="#i-check"/></svg>você quer diminuir a tela, sem proibir de vez;</li>
+          <li><svg><use href="#i-check"/></svg>você tem pouco tempo e quer algo direto ao ponto.</li>
         </ul>
       </div>
       <div class="no">
-        <h3>Não é para você se:</h3>
+        <h3>Não é para você se</h3>
         <ul>
-          <li>você procura tratamento para uma questão de saúde. Nesse caso, converse com o pediatra;</li>
-          <li>você quer zerar a tela de um dia para o outro.</li>
+          <li><svg><use href="#i-x"/></svg>você procura tratamento para uma questão de saúde. Nesse caso, converse com o pediatra;</li>
+          <li><svg><use href="#i-x"/></svg>você quer zerar a tela de um dia para o outro.</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="guarantee" style="margin-top:28px">
+      <svg class="seal" viewBox="0 0 104 104" role="img" aria-label="7 dias de garantia">
+        <circle cx="52" cy="52" r="50" fill="#FFC145"/>
+        <circle cx="52" cy="52" r="44" fill="none" stroke="#123A44" stroke-width="2" stroke-dasharray="3 4"/>
+        <text x="52" y="52" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="36" fill="#123A44">7</text>
+        <text x="52" y="67" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="11.5" fill="#123A44">dias de</text>
+        <text x="52" y="80" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="11.5" fill="#123A44">garantia</text>
+      </svg>
+      <div>
+        <h3>Risco zero para você</h3>
+        <p>Leia o guia e comece o plano. Se achar que não é para você, peça o reembolso em até 7 dias e receba todo o valor de volta, sem precisar explicar o motivo.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="sec bg-white">
   <div class="wrap">
-    <div class="guarantee">
-      <div class="seal"><b>7</b>DIAS DE<br>GARANTIA</div>
-      <div><h3>Risco zero para você</h3><p style="font-size:16px;margin-top:6px">Leia o guia e comece o plano. Se achar que não é para você, peça o reembolso em até 7 dias e receba 100% do valor de volta, sem precisar explicar o motivo.</p></div>
-    </div>
+    <h2>Como você recebe</h2>
+    <ol class="steps3">
+      <li>Clique no botão e preencha seu nome e e-mail.</li>
+      <li>Pague com Pix ou cartão, na página segura da Kiwify.</li>
+      <li>Receba o acesso ao guia no seu e-mail, logo depois que o pagamento for aprovado.</li>
+    </ol>
   </div>
 </section>
 
-<section class="offer">
+<section class="sec bg-deep">
   <div class="wrap">
     <h2>Comece hoje à noite</h2>
-    <ul class="list">
-      <li>Plano de 21 dias, passo a passo</li>
-      <li>Como desligar sem briga, em 5 passos</li>
-      <li>Roteiro para a hora da crise e frases prontas</li>
-      <li>100 brincadeiras sem tela, separadas por idade</li>
-      <li>Configuração de iPhone, Android e YouTube</li>
-      <li>Materiais para imprimir e colar na geladeira</li>
+    <ul class="offer-list">
+      <li><svg><use href="#i-check-sun"/></svg>Plano de 21 dias, passo a passo</li>
+      <li><svg><use href="#i-check-sun"/></svg>Como desligar sem briga, em 5 passos</li>
+      <li><svg><use href="#i-check-sun"/></svg>Roteiro para a hora da crise e frases prontas</li>
+      <li><svg><use href="#i-check-sun"/></svg>100 brincadeiras sem tela, separadas por idade</li>
+      <li><svg><use href="#i-check-sun"/></svg>Configuração de iPhone, Android e YouTube</li>
+      <li><svg><use href="#i-check-sun"/></svg>Materiais para imprimir</li>
     </ul>
-    <div class="buy">
-      <div class="price"><small>R$</small>19,90</div>
-      <div class="price-note">pagamento único · acesso imediato</div>
-      <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI">Quero o guia por R$ 19,90</a>
-      <div class="safe"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#14857A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Pagamento seguro pela Kiwify · Pix ou cartão</div>
+    <div class="buy" id="comprar2">
+      <p class="label">Pagamento único</p>
+      <div class="price"><span class="cur">R$</span><span class="val">19,90</span></div>
+      <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI">Comprar o guia</a>
+      <div class="trust">
+        <div><svg><use href="#i-pay"/></svg>Pix ou cartão</div>
+        <div><svg><use href="#i-mail"/></svg>Acesso na hora, no seu e-mail</div>
+        <div><svg><use href="#i-shield"/></svg>Garantia de 7 dias</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section class="sec faq">
   <div class="wrap">
     <h2>Perguntas frequentes</h2>
-    <details><summary>Como eu recebo o guia?</summary><p>Logo depois que o pagamento é aprovado, você recebe o acesso no seu e-mail. No Pix e no cartão, a aprovação costuma ser na hora.</p></details>
-    <details><summary>É um livro físico?</summary><p>Não. É um guia digital em PDF. Você lê no celular, no computador ou imprime as páginas que quiser.</p></details>
-    <details><summary>Serve para qual idade?</summary><p>Para crianças de 2 a 10 anos. Muitas partes têm orientações separadas para os pequenos e para os maiores, e as brincadeiras são divididas por idade.</p></details>
-    <details><summary>Vou ter que proibir a tela?</summary><p>Não. O plano diminui aos poucos e coloca horário para começar e para acabar. A ideia é a tela deixar de ser motivo de briga.</p></details>
-    <details><summary>Quanto tempo eu preciso por dia?</summary><p>Poucos minutos. Cada dia tem uma tarefa curta, pensada para caber na rotina de quem trabalha.</p></details>
-    <details><summary>E se não funcionar aqui em casa?</summary><p>Você tem 7 dias de garantia. Se achar que não é para você, peça o reembolso e receba todo o valor de volta.</p></details>
-    <details><summary>Meu filho tem um diagnóstico. O guia serve?</summary><p>O guia trata de rotina e combinados em casa e não substitui a orientação do pediatra ou dos profissionais que acompanham seu filho. Converse com eles antes de mudar a rotina.</p></details>
+    <details><summary>Como eu recebo o guia?<svg><use href="#i-plus"/></svg></summary><p>Logo depois que o pagamento é aprovado, você recebe no seu e-mail o acesso à área onde está o guia. No Pix e no cartão, a aprovação costuma ser na hora.</p></details>
+    <details><summary>É um livro físico?<svg><use href="#i-plus"/></svg></summary><p>Não. É um guia digital em PDF. Você lê no celular, no computador ou imprime as páginas que quiser.</p></details>
+    <details><summary>Serve para qual idade?<svg><use href="#i-plus"/></svg></summary><p>Para crianças de 2 a 10 anos. Várias partes têm orientações separadas para os pequenos e para os maiores, e as brincadeiras são divididas por idade.</p></details>
+    <details><summary>Vou ter que proibir a tela?<svg><use href="#i-plus"/></svg></summary><p>Não. O plano diminui aos poucos e coloca horário para começar e para acabar. A ideia é a tela deixar de ser motivo de briga.</p></details>
+    <details><summary>Quanto tempo eu preciso por dia?<svg><use href="#i-plus"/></svg></summary><p>Poucos minutos. Cada dia tem uma tarefa curta, pensada para caber na rotina de quem trabalha.</p></details>
+    <details><summary>E se não funcionar aqui em casa?<svg><use href="#i-plus"/></svg></summary><p>Você tem 7 dias de garantia. Se achar que não é para você, peça o reembolso e receba todo o valor de volta.</p></details>
+    <details><summary>Meu filho tem um diagnóstico. O guia serve?<svg><use href="#i-plus"/></svg></summary><p>O guia trata de rotina e combinados em casa e não substitui a orientação do pediatra ou dos profissionais que acompanham seu filho. Converse com eles antes de mudar a rotina.</p></details>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="brand">Menos Tela, <span>Sem Guerra</span></div>
+    <div class="brand">Menos Tela, Sem Guerra</div>
     <p>Dúvidas: contato.menostela@gmail.com</p>
     <p><a href="https://docs.google.com/document/d/e/2PACX-1vRPt2_FCQVtSn_FtmhSpMO7adUT0yeCVWVq1qU3ztaTEchj4jvNQ2Tch_ZL64olvNpiCACwGX9UUUBm/pub" target="_blank" rel="noopener">Política de Privacidade</a></p>
     <p>Este guia tem caráter informativo e não substitui a orientação de um pediatra.</p>
@@ -325,34 +494,57 @@ footer p { margin-top: 8px; }
   </div>
 </footer>
 
-<div class="sticky" id="sticky">
+<div class="sticky" id="sticky" aria-hidden="true">
   <div class="p">R$ 19,90<small>acesso imediato</small></div>
-  <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI">Quero o guia</a>
+  <a class="cta" href="https://pay.kiwify.com.br/R8PmTOI" tabindex="-1">Comprar o guia</a>
 </div>
 
 <script>
 (function () {
   var q = window.location.search;
-  if (!q) return;
-  document.querySelectorAll('a.cta').forEach(function (a) {
-    a.href = a.href + (a.href.indexOf('?') === -1 ? q : '&' + q.slice(1));
-  });
-})();
-(function () {
+  if (q) {
+    document.querySelectorAll('a.cta').forEach(function (a) {
+      a.href = a.href + (a.href.indexOf('?') === -1 ? q : '&' + q.slice(1));
+    });
+  }
+
   var bar = document.getElementById('sticky');
-  var buys = document.querySelectorAll('.buy');
-  if (!('IntersectionObserver' in window)) { bar.classList.add('on'); return; }
-  var seen = new Set();
-  var started = false;
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
-    if (!started && window.scrollY > 200) started = true;
-    bar.classList.toggle('on', started && seen.size === 0);
-  });
-  buys.forEach(function (b) { io.observe(b); });
-  window.addEventListener('scroll', function () {
-    if (!started && window.scrollY > 200) { started = true; bar.classList.toggle('on', seen.size === 0); }
-  }, { passive: true });
+  var c1 = document.querySelector('#comprar .cta');
+  var c2 = document.querySelector('#comprar2 .cta');
+  function visible(el) {
+    var r = el.getBoundingClientRect();
+    return r.top < window.innerHeight - 70 && r.bottom > 0;
+  }
+  function updateBar() {
+    var on = !visible(c1) && !visible(c2);
+    bar.classList.toggle('on', on);
+    bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+    bar.querySelector('a').tabIndex = on ? 0 : -1;
+  }
+  window.addEventListener('scroll', updateBar, { passive: true });
+  window.addEventListener('resize', updateBar);
+  updateBar();
+
+  var peek = document.getElementById('peek');
+  var cards = peek.querySelectorAll('.card');
+  var dots = document.getElementById('dots');
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  cards.forEach(function () { dots.appendChild(document.createElement('span')); });
+  function step() { return cards[0].getBoundingClientRect().width + 16; }
+  function updatePeek() {
+    var i = Math.round(peek.scrollLeft / step());
+    var max = peek.scrollWidth - peek.clientWidth - 2;
+    if (peek.scrollLeft >= max) i = cards.length - 1;
+    dots.querySelectorAll('span').forEach(function (d, k) { d.classList.toggle('on', k === i); });
+    prev.disabled = peek.scrollLeft <= 2;
+    next.disabled = peek.scrollLeft >= max;
+  }
+  peek.addEventListener('scroll', updatePeek, { passive: true });
+  prev.addEventListener('click', function () { peek.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { peek.scrollBy({ left: step(), behavior: 'smooth' }); });
+  window.addEventListener('resize', updatePeek);
+  updatePeek();
 })();
 </script>
 </body>
