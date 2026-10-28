@@ -79,15 +79,22 @@ p + p { margin-top: 14px; }
 .note { font-size: 14px; line-height: 1.5; color: var(--muted); }
 
 /* ---------- topo ---------- */
-.topbar { background: var(--deep); color: #DCEBEE; font-size: 14px; font-weight: 700; text-align: center; padding: 9px var(--gutter); }
+.topbar { background: var(--deep); color: #DCEBEE; font-size: 14px; font-weight: 700; text-align: center; padding: 8px var(--gutter); }
+
+/* como foi feito */
+.made { display: grid; gap: 16px; margin-top: 8px; }
+.made-item { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+.made-item .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--sun-soft); display: flex; align-items: center; justify-content: center; }
+.made-item .ic svg { width: 24px; height: 24px; }
+.made-item p { font-size: 16px; line-height: 1.5; margin-top: 2px; }
 
 /* ---------- hero ---------- */
-.hero { background: var(--peach); padding: 30px 0 48px; overflow: hidden; }
-.hero-grid { display: grid; gap: 26px; }
+.hero { background: var(--peach); padding: 26px 0 44px; overflow: hidden; }
+.hero-grid { display: grid; gap: 20px; }
 .hero .who { font-size: 16px; font-weight: 800; color: var(--teal); margin-bottom: 12px; }
 .hero .sub { font-size: 19px; line-height: 1.5; margin-top: 14px; max-width: 34ch; }
 
-.mock { position: relative; width: min(52%, 220px); margin: 0 auto; aspect-ratio: 800 / 1133; }
+.mock { position: relative; width: min(42%, 180px); margin: 0 auto; aspect-ratio: 800 / 1133; }
 .mock .sheet { position: absolute; inset: 0; border-radius: 6px; background: #fff; box-shadow: 0 6px 18px rgba(18, 58, 68, .14); }
 .mock .sheet.s1 { transform: translate(14px, 10px) rotate(4deg); }
 .mock .sheet.s2 { transform: translate(7px, 5px) rotate(2deg); }
@@ -227,6 +234,11 @@ footer a { color: #DCEBEE; }
 .sticky .p small { display: block; font-size: 12px; font-weight: 700; color: var(--muted); margin-top: 4px; }
 .sticky .cta { margin: 0; flex: 1; min-height: 52px; font-size: 18px; box-shadow: 0 4px 0 var(--coral-dark); }
 
+@media (max-width: 719px) and (max-height: 780px) {
+  .hero-buy { order: 2; }
+  .hero-mock { order: 3; }
+  .hero-text { order: 1; }
+}
 @media (min-width: 720px) {
   .sec { padding: 88px 0; }
   .arrows { display: flex; }
@@ -397,6 +409,20 @@ footer a { color: #DCEBEE; }
     </div>
   </div>
 </section>
+
+<section class="sec bg-peach">
+  <div class="wrap">
+    <h2>Como este guia foi feito</h2>
+    <div class="made">
+      <div class="made-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#123A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></svg></div><div><h3>A partir das recomendações da pediatria</h3><p>Os limites de tempo por idade seguem a Sociedade Brasileira de Pediatria. As fontes estão listadas no final do guia.</p></div></div>
+      <div class="made-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#123A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><div><h3>Pensado para a rotina real</h3><p>Em vez de cortar tudo de uma vez, o plano usa passos pequenos: avisar antes de desligar, combinar a regra e oferecer outra coisa no lugar da tela.</p></div></div>
+      <div class="made-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#123A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div><div><h3>Escrito em linguagem simples</h3><p>Sem termos técnicos. Cada dia tem uma tarefa curta e o que dizer para a criança.</p></div></div>
+      <div class="made-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#123A44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><div><h3>Não substitui o pediatra</h3><p>O guia trata de rotina e combinados em casa, e mostra em que situações vale procurar o médico da criança.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS: entram aqui quando houver depoimentos reais, com permissão por escrito -->
 
 <section class="sec">
   <div class="wrap">
